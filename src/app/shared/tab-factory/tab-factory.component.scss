@@ -1,0 +1,39 @@
+@import '../../../assets/common/index';
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav-tabs {
+    padding: 0 0.5rem;
+    line-height: 1.7rem;
+    border: 0;
+}
+
+.nav-tabs {
+    li > a {
+        color: $steel-grey;
+        &:hover {
+            color: $sky-blue;
+        }
+    }
+}
+
+.nav-tabs a {
+    border-bottom: 2px solid $steel-grey;
+}
+
+.nav-tabs a.active {
+    border-bottom: 2px solid $sky-blue;
+    span {
+        color: $sky-blue;
+    }
+}

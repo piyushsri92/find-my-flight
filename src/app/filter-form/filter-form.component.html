@@ -1,0 +1,105 @@
+<form [formGroup]="registerFilterForm" (ngSubmit)="onSubmit()">
+    <div class="grid-container">
+        <div class="form-group col-6-item">
+            <label class="form-label">Departure</label>
+            <select formControlName="departureCity" class="form-control"
+                [ngClass]="{ 'is-invalid': departureCity && f.departureCity.errors }">
+                <option *ngFor="let city of sourceCities" [ngValue]="city"
+                    (change)="dropdownSelect('departure', $event)">
+                    {{city.label}}
+                </option>
+            </select>
+            <div *ngIf="submitted && f.departureCity.errors" class="invalid-feedback">
+                <div *ngIf="f.departureCity.errors.required">Please select source city</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="form-group col-6-item">
+            <label class="form-label">Destination</label>
+            <select formControlName="destinationCity" class="form-control"
+                [ngClass]="{ 'is-invalid': destinationCity && f.destinationCity.errors }">
+                <option *ngFor="let city of destinationCities" [ngValue]="city"
+                    (change)="dropdownSelect('departure', $event)">
+                    {{city.label}}
+                </option>
+            </select>
+            <div *ngIf="submitted && f.destinationCity.errors" class="invalid-feedback">
+                <div *ngIf="f.destinationCity.errors.required">Please select destination city</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="form-group col-3-item1">
+            <label class="form-label">Depart Date</label>
+            <input [matDatepicker]="departDatepicker" [min]="departMinDate" class="form-control"
+                formControlName="departDate" [ngClass]="{ 'is-invalid': submitted && f.departDate.errors }"
+                (dateChange)="selectDate('depart', $event)">
+            <mat-datepicker-toggle [for]="departDatepicker" class="d-picker"></mat-datepicker-toggle>
+            <mat-datepicker #departDatepicker></mat-datepicker>
+            <div *ngIf="submitted && f.departDate.errors" class="invalid-feedback">
+                <div *ngIf="f.departDate.errors.required">Please fill departure date</div>
+            </div>
+        </div>
+
+        <div class="form-group col-3-item2">
+            <label class="form-label">Return Date</label>
+            <input [matDatepicker]="returnDatepicker" [min]="returnMinDate" class="form-control"
+                formControlName="returnDate" [ngClass]="{ 'is-invalid': submitted && f.returnDate.errors }" />
+            <mat-datepicker-toggle [for]="returnDatepicker" class="d-picker"></mat-datepicker-toggle>
+            <mat-datepicker #returnDatepicker></mat-datepicker>
+            <div *ngIf="submitted && f.returnDate.errors" class="invalid-feedback">
+                <div *ngIf="f.returnDate.errors.required">Please fill return date</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="form-group col-3-item1">
+            <label class="form-label">Travellers</label>
+            <input type="number" formControlName="travellers" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.travellers.errors }" />
+            <div *ngIf="submitted && f.travellers.errors" class="invalid-feedback">
+                <div *ngIf="f.travellers.errors.required">No. of travellers required</div>
+            </div>
+        </div>
+
+        <div class="form-group col-3-item2">
+            <label class="form-label">Passenger</label>
+            <select formControlName="passengerType" class="form-control"
+                [ngClass]="{ 'is-invalid': passengerType && f.passengerType.errors }">
+                <option *ngFor="let passenger of passengerTypes" [ngValue]="passenger"
+                    (change)="dropdownSelect('passenger', $event)">
+                    {{passenger.type}}
+                </option>
+            </select>
+            <div *ngIf="submitted && f.passengerType.errors" class="invalid-feedback">
+                <div *ngIf="f.passengerType.errors.required">Please select passenger</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="form-group col-6-item">
+            <label class="form-label">Class</label>
+            <select formControlName="classType" class="form-control"
+                [ngClass]="{ 'is-invalid': destinationCity && f.destinationCity.errors }">
+                <option *ngFor="let class of classTypes" [ngValue]="class" (change)="dropdownSelect('class', $event)">
+                    {{class.type}}
+                </option>
+            </select>
+            <div *ngIf="submitted && f.classType.errors" class="invalid-feedback">
+                <div *ngIf="f.classType.errors.required">Please select class</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="grid-container">
+        <div class="form-group col-6-item">
+            <button class="form-btn form-btn-secondary mr-5">Search flights</button>
+        </div>
+    </div>
+</form>

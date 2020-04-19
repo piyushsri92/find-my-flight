@@ -1,0 +1,50 @@
+@import "../../assets/common/index";
+
+:host {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0px;
+}
+
+.flight-container {
+    border-bottom: 5px solid $light-grey;
+    background: $white;
+}
+
+.header-item1 {
+    grid-column: 1/2
+}
+
+.header-item2 {
+    grid-column: 2/6
+}
+
+.header-item3 {
+    grid-column: 6/7
+}
+
+.class-type {
+    padding: 10px;
+    border-radius: 7px;
+    background: $royal-blue;
+    color: $white;
+}
+
+.circle{
+    position: relative;
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: $green;
+    border-radius: 50%;
+    text-align: center;
+    float: left;
+}
+
+.line{
+    width: 35%;
+    border: 1px solid $green;
+    float: left;
+    margin-top: 0.1rem;
+}

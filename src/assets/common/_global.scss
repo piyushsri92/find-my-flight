@@ -1,0 +1,54 @@
+/* helper class */
+.align-center {
+    text-align: center;
+}
+
+.align-end {
+    text-align: end;
+}
+
+.y-center {
+    display: flex;
+    align-items: center;
+}
+
+.y-end-center {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.y-start-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.xy-center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.col-dark-red {
+    color: $dark-red;
+}
+
+.container {
+    padding: 10px;
+}
+
+.header {
+    padding: 10px;
+    height: 60px;
+    background: $royal-blue;
+    color: $white;
+}
+
+.wd-23 {
+    width: 23%;
+}
+
+.wd-100 {
+    width: 100%;
+}

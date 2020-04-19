@@ -1,0 +1,80 @@
+[
+    {
+        "id": 0,
+        "airline": "Ethopian airlines",
+        "stoppage": "1 Stop (ADD)",
+        "duration": "14h 20m",
+        "departureCity": "PNQ",
+        "destinationCity": "DEL",
+        "departDate": "2025-01-01",
+        "startTime": "02:30am",
+        "endTime": "04:50pm",
+        "becn": {
+            "title": "Basic Economy",
+            "price": "$140",
+            "seatsLeft": 2
+        },
+        "mecn": {
+            "title": "Main Cabin",
+            "price": "$220",
+            "seatsLeft": 3
+        },
+        "ecn": {
+            "title": "Economy",
+            "price": "$345",
+            "seatsLeft": 3
+        }
+    },
+    {
+        "id": 1,
+        "airline": "British airlines",
+        "stoppage": "1 Stop (ADD)",
+        "duration": "06h 50m",
+        "departureCity": "PNQ",
+        "destinationCity": "DEL",
+        "departDate": "2025-01-01",
+        "startTime": "03:00am",
+        "endTime": "09:50pm",
+        "becn": {
+            "title": "Basic Economy",
+            "price": "$140",
+            "seatsLeft": 2
+        },
+        "mecn": {
+            "title": "Main Cabin",
+            "price": "$220",
+            "seatsLeft": 3
+        },
+        "ecn": {
+            "title": "Economy",
+            "price": "$345",
+            "seatsLeft": 3
+        }
+    },
+    {
+        "id": 2,
+        "airline": "British airlines",
+        "stoppage": "1 Stop (ADD)",
+        "duration": "06h 50m",
+        "departureCity": "LKO",
+        "destinationCity": "DEL",
+        "departDate": "2025-01-01",
+        "startTime": "03:00am",
+        "endTime": "09:50pm",
+        "becn": {
+            "title": "Basic Economy",
+            "price": "$140",
+            "seatsLeft": 2
+        },
+        "mecn": {
+            "title": "Main Cabin",
+            "price": "$220",
+            "seatsLeft": 3
+        },
+        "ecn": {
+            "title": "Economy",
+            "price": "$345",
+            "seatsLeft": 3
+        }
+    }
+]

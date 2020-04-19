@@ -1,0 +1,29 @@
+// Descriptive color variables
+
+$white          : #fff;
+$black          : #000;
+$grey           : #9b9ea0;
+$dark-grey      : #6c7077;
+$steel-grey     : #a09c9c;
+$light-grey     : #ccd0d2;
+$regent-st-blue : #add8e6;
+$river-bed      : #48525c;
+$yellow-orange  : #ffa949;
+$royal-blue     : #0341a0;
+$sky-blue       : #69c;
+$green          : #2cb049;
+$dark-green     : #0e8612;
+$dark-red       : #b50505;
+
+// Functional color variables
+
+$text-color: $white;
+
+$button-bg-color : $green;
+$button-border-dark  : $dark-green;
+
+$color-link-default : $yellow-orange;
+$color-link-visited : $regent-st-blue;
+
+$color-shadow       : rgba($black,.8);
+$color-body         : $white;

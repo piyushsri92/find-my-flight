@@ -1,0 +1,71 @@
+<div *ngIf="canShowPage">
+    <div class="header grid-container">
+        <div class="header-item1 y-center">
+            <mat-icon (click)="back()">keyboard_backspace</mat-icon>
+        </div>
+        <div class="header-item2">
+            <div class="col-6-item xy-center font-bold">
+                <span>{{toBeSearched.departureCity.code}}</span>
+                <span class="xy-center">
+                    <mat-icon>arrow_right_alt</mat-icon>
+                </span>
+                <span>{{toBeSearched.destinationCity.code}}</span></div>
+            <div class="col-6-item align-center font-sm">{{toBeSearched.departDate | date: 'MMM dd'}} <span
+                    *ngIf="toBeSearched.returnDate">&nbsp;-&nbsp;</span>
+                {{toBeSearched.returnDate | date: 'MMM dd'}} <span>&nbsp; | &nbsp;</span> {{toBeSearched.travellers}}
+                &nbsp;
+                {{toBeSearched.passengerType.type}}</div>
+        </div>
+        <div class="header-item3 y-end-center">
+            <mat-icon>edit</mat-icon>
+        </div>
+    </div>
+
+    <div *ngFor="let item of filteredData" class="flight-container">
+        <div class="grid-container">
+            <div class="col-6-item y-start-center">
+                <span>
+                    <mat-icon class="mr-1 col-dark-red">flight_takeoff</mat-icon>
+                </span>
+                <span class="font-500">{{item.airline}}</span>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="col-2-item1">
+                <div class="col-6-item font-bold">{{item.startTime}}</div>
+                <div class="col-6-item">{{item.departureCity}}</div>
+            </div>
+            <div class="col-3-item2 align-center">
+                <div class="col-6-item font-sm">{{item.duration}}</div>
+                <div class="col-6-item">
+                    <div class="xy-center">
+                        <div class="circle"></div>
+                        <div class="line"></div>
+                        <div class="circle"></div>
+                        <div class="line"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="col-6-item font-sm">{{item.stoppage}}</div>
+            </div>
+            <div class="col-3-item3 align-end">
+                <div class="col-6-item font-bold">{{item.endTime}}</div>
+                <div class="col-6-item">{{item.destinationCity}}</div>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="class-type col-2-item1">
+                <div class="col-6-item font-bold">{{item.becn.price}}</div>
+                <div class="col-6-item font-sm">{{item.becn.title}}</div>
+            </div>
+            <div class="class-type col-2-item2">
+                <div class="col-6-item font-bold">{{item.mecn.price}}</div>
+                <div class="col-6-item font-sm">{{item.mecn.title}}</div>
+            </div>
+            <div class="class-type col-2-item3">
+                <div class="col-6-item font-bold">{{item.ecn.price}}</div>
+                <div class="col-6-item font-sm">{{item.ecn.title}}</div>
+            </div>
+        </div>
+    </div>
+</div>
