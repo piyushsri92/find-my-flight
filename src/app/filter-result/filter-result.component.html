@@ -1,4 +1,4 @@
-<div *ngIf="canShowPage">
+<div *ngIf="canShowPage; else noData">
     <div class="header grid-container">
         <div class="header-item1 y-center">
             <mat-icon (click)="back()">keyboard_backspace</mat-icon>
@@ -69,3 +69,12 @@
         </div>
     </div>
 </div>
+
+<ng-template #noData>
+    <p>
+      There are no flights to show.
+      Kindly select 'Departure Date' as '01/01/2025' to view filtered result.
+      Data is avaliable for above date only.
+    </p>
+</ng-template>
+
