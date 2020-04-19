@@ -4,7 +4,7 @@
             <label class="form-label">Departure</label>
             <select formControlName="departureCity" class="form-control"
                 [ngClass]="{ 'is-invalid': departureCity && f.departureCity.errors }">
-                <option *ngFor="let city of sourceCities" [ngValue]="city"
+                <option *ngFor="let city of departureCities" [ngValue]="city"
                     (change)="dropdownSelect('departure', $event)">
                     {{city.label}}
                 </option>
@@ -21,7 +21,7 @@
             <select formControlName="destinationCity" class="form-control"
                 [ngClass]="{ 'is-invalid': destinationCity && f.destinationCity.errors }">
                 <option *ngFor="let city of destinationCities" [ngValue]="city"
-                    (change)="dropdownSelect('departure', $event)">
+                    (change)="dropdownSelect('destination', $event)">
                     {{city.label}}
                 </option>
             </select>

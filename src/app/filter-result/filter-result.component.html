@@ -1,4 +1,4 @@
-<div *ngIf="canShowPage; else noData">
+<div *ngIf="canShowPage">
     <div class="header grid-container">
         <div class="header-item1 y-center">
             <mat-icon (click)="back()">keyboard_backspace</mat-icon>
@@ -35,7 +35,7 @@
                 <div class="col-6-item font-bold">{{item.startTime}}</div>
                 <div class="col-6-item">{{item.departureCity}}</div>
             </div>
-            <div class="col-3-item2 align-center">
+            <div class="col-2-item2 align-center">
                 <div class="col-6-item font-sm">{{item.duration}}</div>
                 <div class="col-6-item">
                     <div class="xy-center">
@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-6-item font-sm">{{item.stoppage}}</div>
             </div>
-            <div class="col-3-item3 align-end">
+            <div class="col-2-item3 align-end">
                 <div class="col-6-item font-bold">{{item.endTime}}</div>
                 <div class="col-6-item">{{item.destinationCity}}</div>
             </div>
@@ -70,11 +70,11 @@
     </div>
 </div>
 
-<ng-template #noData>
+<!-- <ng-template #noData>
     <p>
       There are no flights to show.
       Kindly select 'Departure Date' as '01/01/2025' to view filtered result.
       Data is avaliable for above date only.
     </p>
-</ng-template>
+</ng-template> -->
 

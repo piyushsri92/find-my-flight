@@ -14,7 +14,7 @@ export class FilterFormComponent implements OnInit {
   registerFilterForm: FormGroup;
   submitted = false;
 
-  sourceCities: ICity[] = Cities;
+  departureCities: ICity[] = Cities;
   destinationCities: ICity[] = Cities;
   classTypes: IClassTypes[] = ClassTypes;
   passengerTypes: IPassengerTypes[] = PassengerTypes;
