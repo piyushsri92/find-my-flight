@@ -2,32 +2,24 @@
     <div class="grid-container">
         <div class="form-group col-6-item">
             <label class="form-label">Departure</label>
-            <select formControlName="departureCity" class="form-control"
-                [ngClass]="{ 'is-invalid': departureCity && f.departureCity.errors }">
+            <select formControlName="departureCity" class="form-control">
                 <option *ngFor="let city of departureCities" [ngValue]="city"
                     (change)="dropdownSelect('departure', $event)">
                     {{city.label}}
                 </option>
             </select>
-            <div *ngIf="submitted && f.departureCity.errors" class="invalid-feedback">
-                <div *ngIf="f.departureCity.errors.required">Please select source city</div>
-            </div>
         </div>
     </div>
 
     <div class="grid-container">
         <div class="form-group col-6-item">
             <label class="form-label">Destination</label>
-            <select formControlName="destinationCity" class="form-control"
-                [ngClass]="{ 'is-invalid': destinationCity && f.destinationCity.errors }">
+            <select formControlName="destinationCity" class="form-control">
                 <option *ngFor="let city of destinationCities" [ngValue]="city"
                     (change)="dropdownSelect('destination', $event)">
                     {{city.label}}
                 </option>
             </select>
-            <div *ngIf="submitted && f.destinationCity.errors" class="invalid-feedback">
-                <div *ngIf="f.destinationCity.errors.required">Please select destination city</div>
-            </div>
         </div>
     </div>
 
@@ -63,36 +55,29 @@
                 [ngClass]="{ 'is-invalid': submitted && f.travellers.errors }" />
             <div *ngIf="submitted && f.travellers.errors" class="invalid-feedback">
                 <div *ngIf="f.travellers.errors.required">No. of travellers required</div>
+                <div *ngIf="f.travellers.errors.min">Please select one or more passenger</div>
             </div>
         </div>
 
         <div class="form-group col-3-item2">
             <label class="form-label">Passenger</label>
-            <select formControlName="passengerType" class="form-control"
-                [ngClass]="{ 'is-invalid': passengerType && f.passengerType.errors }">
+            <select formControlName="passengerType" class="form-control">
                 <option *ngFor="let passenger of passengerTypes" [ngValue]="passenger"
                     (change)="dropdownSelect('passenger', $event)">
                     {{passenger.type}}
                 </option>
             </select>
-            <div *ngIf="submitted && f.passengerType.errors" class="invalid-feedback">
-                <div *ngIf="f.passengerType.errors.required">Please select passenger</div>
-            </div>
         </div>
     </div>
 
     <div class="grid-container">
         <div class="form-group col-6-item">
             <label class="form-label">Class</label>
-            <select formControlName="classType" class="form-control"
-                [ngClass]="{ 'is-invalid': destinationCity && f.destinationCity.errors }">
+            <select formControlName="classType" class="form-control">
                 <option *ngFor="let class of classTypes" [ngValue]="class" (change)="dropdownSelect('class', $event)">
                     {{class.type}}
                 </option>
             </select>
-            <div *ngIf="submitted && f.classType.errors" class="invalid-feedback">
-                <div *ngIf="f.classType.errors.required">Please select class</div>
-            </div>
         </div>
     </div>
 

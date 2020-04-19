@@ -35,13 +35,13 @@ export class FilterFormComponent implements OnInit {
 
   buildForm() {
     this.registerFilterForm = this.formBuilder.group({
-      departureCity: ['', Validators.required],
-      destinationCity: ['', Validators.required],
+      departureCity: [this.destinationCities[0], Validators.required],
+      destinationCity: [this.destinationCities[1], Validators.required],
       departDate: [new Date(), [Validators.required]],
       returnDate: [''],
-      travellers: ['', [Validators.required]],
-      passengerType: ['', [Validators.required]],
-      classType: ['', [Validators.required]],
+      travellers: [1, [Validators.required, Validators.min(1)]],
+      passengerType: [this.passengerTypes[0], [Validators.required]],
+      classType: [this.classTypes[0], [Validators.required]],
     });
   }
 

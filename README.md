@@ -14,7 +14,9 @@ Running the app:
 4. Application will start running on Chrome Browser.
 
 Note*:
-1. Select 'Depart Date' as '01/01/2025' and then click 'search fight'
-2. Data for that will be displayed 
-3. Currently data is available for that day only
+1. Select 'Departed City' as 'PNQ'
+2. Select 'Destination City' as 'DEL'
+3. Select 'Depart Date' as '01/01/2025'
+4. Click 'Search Flights'
+5. Currently data is available for above only
 
